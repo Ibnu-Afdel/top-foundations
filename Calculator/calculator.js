@@ -59,22 +59,66 @@ numberButtons.forEach(button => {
 
 const tabEqual = document.querySelector('#equals');
 tabEqual.addEventListener('click', function (){
-     showResult.textContent = `= ${operate(firstNumber, lastNumber, operator)}`;
+    if (firstNumber && lastNumber && operator) {
+        const calcResult = operate(firstNumber, lastNumber, operator);
+        showResult.textContent = `= ${calcResult}`;
+
+        // After calculation, use the result as the new firstNumber for further operations
+        firstNumber = calcResult.toString();
+        lastNumber = '';
+        operator = '';
+        showFirstNum.textContent = firstNumber;
+        showLastNumber.textContent = '';
+        showOperator.textContent = '';
+        showResult.textContent = '';
+    }
 })
 const tabAdd = document.querySelector('#add');
 tabAdd.addEventListener('click', function (){
+    if (firstNumber && lastNumber && operator) {
+        // Perform the operation if there are already two numbers and an operator
+        const calcResult = operate(firstNumber, lastNumber, operator);
+        showFirstNum.textContent = calcResult;
+        firstNumber = calcResult.toString();
+        lastNumber = '';
+        showLastNumber.textContent = '';
+    }
      operator = (showOperator.textContent = '+');
 })
 const tabSub = document.querySelector('#sub');
 tabSub.addEventListener('click', function (){
+    if (firstNumber && lastNumber && operator) {
+        // Perform the operation if there are already two numbers and an operator
+        const calcResult = operate(firstNumber, lastNumber, operator);
+        showFirstNum.textContent = calcResult;
+        firstNumber = calcResult.toString();
+        lastNumber = '';
+        showLastNumber.textContent = '';
+    }
     operator = (showOperator.textContent = '-');
 })
 const tabDiv = document.querySelector('#div');
 tabDiv.addEventListener('click', function (){
+    if (firstNumber && lastNumber && operator) {
+        // Perform the operation if there are already two numbers and an operator
+        const calcResult = operate(firstNumber, lastNumber, operator);
+        showFirstNum.textContent = calcResult;
+        firstNumber = calcResult.toString();
+        lastNumber = '';
+        showLastNumber.textContent = '';
+    }
     operator = (showOperator.textContent = '/');
 })
 const tabMul = document.querySelector('#mul');
 tabMul.addEventListener('click', function (){
+    if (firstNumber && lastNumber && operator) {
+        // Perform the operation if there are already two numbers and an operator
+        const calcResult = operate(firstNumber, lastNumber, operator);
+        showFirstNum.textContent = calcResult;
+        firstNumber = calcResult.toString();
+        lastNumber = '';
+        showLastNumber.textContent = '';
+    }
     operator = (showOperator.textContent = '*');
 })
 const tabClear = document.querySelector('#clr');
