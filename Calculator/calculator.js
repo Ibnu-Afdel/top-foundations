@@ -15,17 +15,20 @@ function divide(a, b){
 let firstNumber = ''
 let lastNumber = ''
 let operator = '';
-let result = '';
 
 function operate(firstNumber, lastNumber, operator){
+    let result ;
+    let num1 = +firstNumber;
+    let num2 = +lastNumber;
+
     if (operator === '+'){
-       result = add(+firstNumber, +lastNumber);
+       result = add(num1, num2);
     } else if (operator === '-'){
-        result = subtract(+firstNumber, +lastNumber);
+        result = subtract(num1, num2);
     } else if (operator === '*'){
-       result =  multiply(+firstNumber, +lastNumber);
+       result =  multiply(num1, num2);
     } else if (operator === '/'){
-        result = divide(+firstNumber, +lastNumber);
+        result = divide(num1, num2);
     }
     return result;
 }
