@@ -28,6 +28,9 @@ function operate(firstNumber, lastNumber, operator){
     } else if (operator === '*'){
        result =  multiply(num1, num2);
     } else if (operator === '/'){
+        if(num2 === 0){
+            return 'Error, Cant divide by Zero'
+        }
         result = divide(num1, num2);
     }
     return result;
@@ -82,4 +85,5 @@ tabClear.addEventListener('click', function (){
     showFirstNum.textContent = ''
     showLastNumber.textContent = ''
     showOperator.textContent = ''
+    showResult.textContent = ''
 })
