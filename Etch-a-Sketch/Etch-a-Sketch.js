@@ -11,7 +11,6 @@ function generateGrid(squarePerSide = 16) {
         const theDivs = document.createElement('div');
         theDivs.className = 'theDivs';
         // No need to manually set width and height anymore, grid handles this
-
         theDivs.addEventListener('mouseover', function () {
             theDivs.style.backgroundColor = 'red';
         });

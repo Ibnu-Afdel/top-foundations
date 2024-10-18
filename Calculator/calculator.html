@@ -3,32 +3,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>T.O.P - Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
     <script src="calculator.js" defer ></script>
 </head>
 <body>
-    <h1>
+<a style="text-decoration: none; color: white" href="../Home/index.html"><button>Back</button></a>
+<div class="calculator">
+    <h1 style="color: white">
         Calculator
     </h1>
 
 
-    <div>
+    <div class="display" >
         <span class="fistNumber"></span>
         <span class="operator"></span>
         <span class="lastNumber"></span>
         <span class="result"></span>
     </div>
 
-<!--    <button  id="one">1</button>-->
-<!--    <button type="submit" id="two">2</button>-->
-<!--    <button type="submit" id="three">3</button>-->
-<!--    <button type="submit" id="four">4</button>-->
-<!--    <button type="submit" id="five">5</button>-->
-<!--    <button type="submit" id="six">6</button>-->
-<!--    <button type="submit" id="seven">7</button>-->
-<!--    <button type="submit" id="eight">8</button>-->
-<!--    <button type="submit" id="nine">9</button>-->
-<!--    <button type="submit" id="zero">0</button>-->
-
+    <div class="buttons">
     <button class="number-button" id="one">1</button>
     <button class="number-button" id="two">2</button>
     <button class="number-button" id="three">3</button>
@@ -41,10 +34,12 @@
     <button class="number-button" id="zero">0</button>
 
     <button type="submit" id="equals">equals</button>
-    <button type="submit" id="add">Add</button>
-    <button type="submit" id="sub">Subtract</button>
-    <button type="submit" id="div">divide</button>
-    <button type="submit" id="mul">multiply</button>
-    <button type="submit" id="clr">clear</button>
+    <button type="submit" class="operator" id="add">+</button>
+    <button type="submit" class="operator" id="sub">-</button>
+    <button type="submit" class="operator" id="div">/</button>
+    <button type="submit" class="operator" id="mul">x</button>
+    <button type="submit" class="clear" id="clr">clear</button>
+    </div>
+</div>
 </body>
 </html>

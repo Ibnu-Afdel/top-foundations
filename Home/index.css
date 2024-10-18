@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header nav {
+    margin-top: 10px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #eaeaea;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.card a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #4CAF50;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
