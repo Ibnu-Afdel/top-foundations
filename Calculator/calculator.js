@@ -29,11 +29,14 @@ function operate(firstNumber, lastNumber, operator){
        result =  multiply(num1, num2);
     } else if (operator === '/'){
         if(num2 === 0){
-            return 'Error, Cant divide by Zero'
+            return 'Error, Cant divide by Zero : tab clear and continue'
         }
         result = divide(num1, num2);
     }
+
     return result;
+
+
 }
 
 const showFirstNum = document.querySelector('.fistNumber');

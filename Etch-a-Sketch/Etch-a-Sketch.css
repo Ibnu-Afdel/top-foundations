@@ -1,0 +1,30 @@
+.theBigContainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}
+
+.sidebar{
+    flex: 1;
+}
+
+
+.container{
+    display: grid;
+    /*flex-wrap: wrap;*/
+    width: 500px;
+    height: 500px;
+    flex: 1;
+    border: 1px solid black;
+
+}
+
+.theDivs{
+    box-sizing: border-box;
+    border: 1px solid #e5e4e4;
+}
+
+.rightSide{
+    flex: 1;
+}
