@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,17 +9,26 @@
 </head>
 <body>
 
-<h1>Sketch</h1>
-    <div class="theBigContainer">
+<header class="header">
+    <h1 class="headerTitle">Etch-a-Sketch</h1>
+    <nav class="nav">
+        <a class="navLink home">Home</a>
+        <a class="navLink calculator">Calculator</a>
+        <a class="navLink RPS">Rock Paper Scissors</a>
+        <a class="navLink sketch">Sketch</a>
+    </nav>
+</header>
 
-        <div class="sidebar">
-        <button class="resizeButton">Grid</button>
-        </div>
-
-        <div class="container">
-        </div>
-        <div class="rightSide"></div>
+<div class="theBigContainer">
+    <div class="sidebar">
+        <button class="resizeButton">Resize Grid</button>
+        <button class="colorButton">Choose Color</button>
+        <button class="clearButton">Clear Grid</button>
     </div>
+
+    <div class="container">
+    </div>
+</div>
 
 </body>
 </html>

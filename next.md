@@ -5,3 +5,15 @@ and don’t let it crash your calculator!
 - Make it look nice! This is a great project to practice your CSS skills. At least make the operations a different color from the keypad buttons.
 - Add a “backspace” button, so the user can undo if they click the wrong number.
 - Add keyboard support!
+
+# for the sketch
+
+- add the ability to choose color
+- add rainbow mode
+- add erase mode (just white color)
+- add clear
+- make the background a little pinkish 
+then the container white, with black
+colors with low opacity so it pops up
+- add the ability view the border for
+both the whole container and individual divs

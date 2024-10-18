@@ -1,30 +1,92 @@
-.theBigContainer{
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
     display: flex;
-    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.headerTitle {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+}
+
+.navLink {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+
+.theBigContainer {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjusts for header height */
+}
+
+.sidebar {
+    width: 200px; /* Fixed width for the sidebar */
+    background-color: #e0e0e0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button {
+    display: block;
     width: 100%;
-
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.sidebar{
-    flex: 1;
+.resizeButton {
+    background-color: #4CAF50;
+    color: white;
 }
 
+.colorButton {
+    background-color: #2196F3;
+    color: white;
+}
 
-.container{
-    display: grid;
-    /*flex-wrap: wrap;*/
-    width: 500px;
-    height: 500px;
-    flex: 1;
+.clearButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.sidebar button:hover {
+    opacity: 0.8;
+}
+.container {
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    margin-left: 100px; /* Space between sidebar and container */
+    margin-right: 10px;
+    margin-top: 20px;
     border: 1px solid black;
-
+    display: grid;
+    /*grid-template-columns: repeat(16, 1fr);*/
+    /*grid-template-rows: repeat(16, 1fr);*/
 }
 
-.theDivs{
+.theDivs {
     box-sizing: border-box;
     border: 1px solid #e5e4e4;
-}
-
-.rightSide{
-    flex: 1;
+    cursor: pointer;
 }
