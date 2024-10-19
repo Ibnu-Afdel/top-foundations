@@ -10,10 +10,10 @@ and don’t let it crash your calculator!
 
 # for the sketch
 
-- add the ability to choose color
-- add rainbow mode
-- add erase mode (just white color)
-- add clear
+- add the ability to choose color  ###
+- add rainbow mode ##
+- add erase mode (just white color) ##
+- add clear ##
 - make the background a little pinkish 
 then the container white, with black
 colors with low opacity so it pops up
