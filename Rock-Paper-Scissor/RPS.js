@@ -4,6 +4,12 @@ let result = '';
 let humanScore = 0;
 let compScore = 0;
 
+const emojis = {
+    Rock: '🪨',
+    Paper: '📄',
+    Scissor: '✂️'
+};
+
 function getComputerChoice(){
     const choice = Math.random();
 
@@ -36,7 +42,7 @@ function playRound(humanChoice, compChoice){
 
 function updateDom(result){
     const domResult = document.querySelector("#result");
-    domResult.textContent = `you ${result}! , Computer choose ${pcChoice}, and you choose ${myChoice}`
+    domResult.textContent = `You ${result}!, you choose ${emojis[myChoice]}, and Computer choose ${emojis[pcChoice]},`
     const domScore = document.querySelector("#score");
     domScore.textContent = `Computer: ${compScore} | You: ${humanScore}`;
 
