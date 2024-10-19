@@ -2,6 +2,7 @@ const containerDiv = document.querySelector('.container');
 let selectedColor = document.querySelector('.colorPicker').value;
 let rainbowMode = false;
 let eraseMode = false;
+let isDrawing = false;
 function generateGrid(squarePerSide = 16) {
     containerDiv.innerHTML = '';
 
@@ -12,20 +13,65 @@ function generateGrid(squarePerSide = 16) {
     for (let i = 0; i < squarePerSide * squarePerSide; i++) {
         const theDivs = document.createElement('div');
         theDivs.className = 'theDivs';
-        // No need to manually set width and height anymore, grid handles this
-        theDivs.addEventListener('mouseover', function () {
-            if (eraseMode){
-                theDivs.style.backgroundColor = '#ffffff';
-            } else if (rainbowMode){
-                theDivs.style.backgroundColor = getRandomColor();
-            } else {
-                theDivs.style.backgroundColor = selectedColor;
-            }
-        });
+
+        // Desktop events (click and drag)
+        theDivs.addEventListener('mousedown', startDrawing);
+        theDivs.addEventListener('mousemove', draw);
+        theDivs.addEventListener('mouseup', stopDrawing);
+
+        // Mobile events (tap and drag)
+        theDivs.addEventListener('touchstart', startDrawing);
+        theDivs.addEventListener('touchmove', draw);
+        theDivs.addEventListener('touchend', stopDrawing);
 
         containerDiv.appendChild(theDivs);
     }
 }
+
+
+// Start drawing on mousedown or touchstart
+function startDrawing(event) {
+    isDrawing = true;
+
+    // Draw immediately when the user starts drawing
+    if (eraseMode) {
+        event.target.style.backgroundColor = '#ffffff'; // Erase by setting to white
+    } else if (rainbowMode) {
+        event.target.style.backgroundColor = getRandomColor(); // Apply random color
+    } else {
+        event.target.style.backgroundColor = selectedColor; // Apply selected color
+    }
+
+    // Prevent touch scrolling on mobile
+    if (event.type === 'touchstart') {
+        event.preventDefault();
+    }
+}
+
+// Draw on mousemove or touchmove, only if the user is actively drawing
+function draw(event) {
+    if (!isDrawing) return; // Only draw if mousedown or touchstart is active
+
+    // Prevent touch scrolling on mobile
+    if (event.type === 'touchmove') {
+        event.preventDefault();
+    }
+
+    if (eraseMode) {
+        event.target.style.backgroundColor = '#ffffff';
+    } else if (rainbowMode) {
+        event.target.style.backgroundColor = getRandomColor();
+    } else {
+        event.target.style.backgroundColor = selectedColor;
+    }
+}
+
+// Stop drawing on mouseup or touchend
+function stopDrawing(event) {
+    isDrawing = false;
+}
+
+
 
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
@@ -79,3 +125,6 @@ document.querySelector('.resizeButton').addEventListener('click', function (){
 });
 
 generateGrid()
+
+document.body.addEventListener('mouseup', stopDrawing);
+document.body.addEventListener('touchend', stopDrawing);
