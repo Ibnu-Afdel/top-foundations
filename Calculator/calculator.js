@@ -29,7 +29,12 @@ function operate(firstNumber, lastNumber, operator){
        result =  multiply(num1, num2);
     } else if (operator === '/'){
         if(num2 === 0){
-            return 'Error, Cant divide by Zero : tab clear and continue'
+            // return 'Error, Cant divide by Zero : tab clear and continue'
+            showResult.textContent = 'error';
+            showFirstNum.textContent = '';
+            showLastNumber.textContent = '';
+            showOperator.textContent = '';
+            return 'error';
         }
         result = divide(num1, num2);
     }
@@ -64,6 +69,12 @@ const tabEqual = document.querySelector('#equals');
 tabEqual.addEventListener('click', function (){
     if (firstNumber && lastNumber && operator) {
         const calcResult = operate(firstNumber, lastNumber, operator);
+        if (calcResult === 'error') {
+            firstNumber = '';
+            lastNumber = '';
+            operator = '';
+            return;
+        }
         showResult.textContent = `= ${calcResult}`;
 
         // After calculation, use the result as the new firstNumber for further operations

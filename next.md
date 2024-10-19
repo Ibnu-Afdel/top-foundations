@@ -5,6 +5,8 @@ and don’t let it crash your calculator!
 - Make it look nice! This is a great project to practice your CSS skills. At least make the operations a different color from the keypad buttons.
 - Add a “backspace” button, so the user can undo if they click the wrong number.
 - Add keyboard support!
+- the ui.. good for mobile too/ atleast usable
+
 
 # for the sketch
 
@@ -17,3 +19,12 @@ then the container white, with black
 colors with low opacity so it pops up
 - add the ability view the border for
 both the whole container and individual divs
+- tab and drop for writing
+- can draw in mobiles too
+
+# for RPS
+
+- instead if buttons, i will use hand things
+- when winning, bright / bolder congratulations
+- if possible, play again button is must to play again
+- good mobile view
