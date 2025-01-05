@@ -8,11 +8,30 @@ body {
     margin: 0;
   }
   
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #0a74da;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #0b85e8;
+  }
+  
   h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #fff;
   }
+    
   
   .calculator {
     display: flex;
@@ -23,7 +42,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 400px; /* Limits maximum size on larger devices */
+    max-width: 400px; 
   }
   
   .display {
@@ -44,7 +63,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    width: 100%; /* Ensures buttons stretch with layout */
+    width: 100%; 
   }
   
   button {
@@ -88,14 +107,13 @@ body {
   
   button#equals {
     background-color: #0a74da;
-    grid-column: span 2; /* Spans two columns */
+    grid-column: span 2;
   }
   
   button#equals:hover {
     background-color: #0b85e8;
   }
   
-  /* Responsive Adjustments */
   @media (max-width: 600px) {
     button {
       font-size: 1em;
