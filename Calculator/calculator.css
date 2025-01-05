@@ -6,14 +6,15 @@ body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     margin: 0;
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.calculator {
+    color: #fff;
+  }
+  
+  .calculator {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,14 +22,15 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 400px;
-}
-
-.display {
+    width: 90%;
+    max-width: 400px; /* Limits maximum size on larger devices */
+  }
+  
+  .display {
     width: 100%;
     background-color: #444;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,19 +38,19 @@ h1 {
     margin-bottom: 20px;
     border-radius: 5px;
     box-sizing: border-box;
-}
-
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-button {
-    font-size: 1.5em;
-    width: 80px;
-    height: 80px;
-    margin: 5px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%; /* Ensures buttons stretch with layout */
+  }
+  
+  button {
+    font-size: 1.2em;
+    width: 100%;
+    height: 60px;
     border: none;
     border-radius: 5px;
     background-color: #555;
@@ -58,37 +60,51 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #666;
-}
-
-button:active {
+  }
+  
+  button:active {
     background-color: #777;
-}
-
-button.operator {
+  }
+  
+  button.operator {
     background-color: #f69906;
-}
-
-button.operator:hover {
+  }
+  
+  button.operator:hover {
     background-color: #f7a931;
-}
-
-button.clear {
+  }
+  
+  button.clear {
     background-color: #e60000;
-}
-
-button.clear:hover {
+  }
+  
+  button.clear:hover {
     background-color: #ff1a1a;
-}
-
-button#equals {
+  }
+  
+  button#equals {
     background-color: #0a74da;
-    width: calc(80px * 2 + 10px);
-}
-
-button#equals:hover {
+    grid-column: span 2; /* Spans two columns */
+  }
+  
+  button#equals:hover {
     background-color: #0b85e8;
-}
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    button {
+      font-size: 1em;
+      height: 50px;
+    }
+  
+    .display {
+      font-size: 1.2em;
+      padding: 8px;
+    }
+  }
+  
